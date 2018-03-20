@@ -1,0 +1,126 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.gallery-img {
+	margin-bottom: 30px;
+}
+span .roll {
+	background:center center no-repeat #fff;
+	height: 150px;
+	position: absolute;
+	text-align: center;
+	line-height: 153px;
+	width: 150px;
+	z-index: 10;  
+}
+ 
+.roll:before {
+    content: "\f00e"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: black;
+    font-size: 40px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 50px;
+    left: 45px;
+}
+
+.navbar{
+    background-color: #14385D !important;
+    border-bottom: #14385D !important;
+}
+.navbar-brand{
+    font-size: 28px;
+}
+.nav-link{
+    text-transform: uppercase;
+    font-size: 16px; 
+    font-family: 'Oswald', sans-serif;
+}
+#captionH{
+    font-size: 28px; 
+    font-family: 'Oswald', sans-serif;
+}
+#captionSm{
+    font-size: 18px; 
+    font-family: 'Oswald', sans-serif;   
+}
+#top{
+    height: 600px;
+}
+#about{
+    height: 700px;
+}
+#contact{
+    height: 1000px;
+}
+#products{
+    height: 600px;
+}
+#phone-card{
+    width: 260px;
+    height: 350px;
+    margin-bottom: 20px;
+}
+#phone-card-img{
+    margin: auto;
+    display: block;
+    width: 150px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+#card-head-phn{
+    font-family: 'Oswald', sans-serif;   
+}
+.jumbotron{
+    /* border-top: #14385D !important; */
+    border: 1px solid;
+}
+.badge-dark{
+    margin: auto;
+    display: block;
+    width: 100px;
+    padding: 10px;
+    font-size:14px;
+}
+#phone-path{
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+#show-phone{
+    height: 400px;
+    width: 350px;
+}
+#post-img{
+    height:400px;
+    width:1050px;
+    margin:auto;
+    display: block;
+}
+#post-img-all{
+    height:240px;
+    width:375px;
+}
+#post-img-edit{
+    height:200px;
+    width:350px;
+}
+@media screen and (max-width: 480px) {
+
+    #post-img{
+        height:200px;
+        width:380px;
+    }
+
+}
+
+@media screen and (max-width: 991px) and (min-width: 480px) {
+    #post-img{
+        height:300px;
+        width:600px;
+    }
+}
