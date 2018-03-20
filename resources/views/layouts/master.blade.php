@@ -38,25 +38,37 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
             
     <script src="{{ asset('js/font-awesome/fontawesome-all.min.js') }}"></script>
-    {{--  <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>  --}}
-        <script src="{{ asset('dropify/js/dropify.js' )}}"></script>
+      <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('dropify/js/dropify.js' )}}"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('.dropify').dropify();
+
+            $(function () {
+
+                $("#search-item").autocomplete({
+                    source: 'http://localhost:8000/search'
+                });
+            });
+
+            $('#searchBtn').on('click', function () {
+                var name = $('#search-item').val();
+                var id = $('#search-item').attr('id');
+                console.log(name);
+                console.log(id);
+                {{--$.ajax({--}}
+                    {{--method: 'get',--}}
+                    {{--dataType: 'text',--}}
+                    {{--url: '{{ url('/product_search') }}',--}}
+                    {{--data: {nameSearch:name},--}}
+                    {{--success: function (data) {--}}
+                        {{--console.log(data);--}}
+                    {{--}--}}
+                {{--});--}}
+            });
         });
     </script>
-    <script>
-        $( function() {
 
-          $( "#search-item" ).autocomplete({
-            source: 'http://localhost:8000/search'
-          });
-        });
-
-        $(document).on('click', '.ui-autocomplete-input', function(){
-           
-        });
-    </script>
     {{--  <script>
       $('#search-form').submit(function(){
         data = $(this).seriallize();

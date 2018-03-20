@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+Use Illuminate\Database\Eloquent\Collection;
 use App\Phone;
 use App\User;
+use App\Brand;
 
 class PagesController extends Controller
 {
@@ -39,40 +41,29 @@ class PagesController extends Controller
         return $searchRes;      
     }
 
-    public function brand(Request $request)
+    public function brand($id)
     {
-        $term = $request->term;
-        $items = Phone::where('brand', '=', $term)->get();
-        if(count($items) == 0){
-            $searchRes[] = "No brands";
-        }
-        else {
-            foreach($items as $val){
-                $searchRes[] = $val->name;
-            } 
-        }
-        return $searchRes; 
+        $phone = Phone::where('brand', '=', $id)->get();
+        return view('phones.brands', ['phone' => $phone]);
     }
-    // public function search(Request $request)
-    // {
-    //     if($request->ajax()){
-    //         $find = Phone::where('name', 'LIKE','%'.$request->name.'%')->get();
-    //         return resopnse()->json();
-    //     }
-    // }
-    // public function update()
-    // {
-    //     $this->validate($request, [
-    //         'title' => 'required',
-    //         'body' => 'required'
-    //     ]);
-    //     $post = User::find($id);   
-    //     $post->name = $request->input('name');
-    //     $post->email = $request->input('emailbody');
-    //     $post->save();
-    //     return redirect('edit_user')->with('success', 'Post updated');
-    //     // return view('users.edit');
-    // }
+
+    public function product_search($name){
+//        $term = $request->term;
+        $name = Phone::where('name', '=', $name)->get();
+        $res = '';
+        foreach ($name as $row){
+            $res .= $row->name;
+        }
+//        if(count($name) == 0){
+//            $searchRes[] = "No phones";
+//        }
+//        else {
+//            foreach($name as $val){
+//                $searchRes[] = $val->name;
+//            }
+//        }
+        echo $res;
+    }
 }
 
 

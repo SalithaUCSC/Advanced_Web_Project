@@ -23,7 +23,7 @@ $(document).ready(function() {
             $(this).parent().siblings().removeClass('active');
 
 	      }
-	    })	    
+	    })
 	});
 
 	// (function(){
@@ -56,4 +56,5 @@ $(document).ready(function() {
 		}, "slow");
 		});
 		});
+
 });
