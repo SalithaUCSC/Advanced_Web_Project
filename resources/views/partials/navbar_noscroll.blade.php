@@ -17,6 +17,9 @@
                     <li class="{{ Request::is('posts') ? 'nav-item active' : '' }}">
                         <a class="nav-link" href="/posts">Blog</a>
                     </li>
+                    <li class="{{ Request::is('cart') ? 'nav-item active' : '' }}">
+                        <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i> Cart ({{Cart::count()}})</a>
+                    </li>
                     <li class="{{ Request::is('login') ? 'nav-item active' : '' }}"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                     <li class="{{ Request::is('register') ? 'nav-item active' : '' }}"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                 @else
@@ -34,18 +37,16 @@
                     <li class="{{ Request::is('dashboard') ? 'nav-item active' : '' }}">
                         <a class="nav-link" href="/dashboard">Dashboard</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/profile">
-                            User 
-                        </a>
+                    <li class="{{ Request::is('profile') ? 'nav-item active' : '' }}">
+                        <a class="nav-link" href="/profile">profile</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    <li class="{{ Request::is('cart') ? 'nav-item active' : '' }}">
+                        <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i> Cart ({{Cart::count()}})</a>
                     </li>
                     <li class="nav-item">                                
                         <a class="nav-link" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
+                            document.getElementById('logout-form').submit();">
                         Logout
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

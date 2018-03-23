@@ -13,13 +13,19 @@
 
 Route::get('/', 'PagesController@index');
 Route::get('/brand/{id}', 'PagesController@brand');
+Route::get('/search_product/{{name}}', 'PagesController@product_search');
 Route::resource('phones', 'PhonesController');
 Route::resource('posts', 'PostsController');
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/profile', 'PagesController@profile');
-    Route::get('/edit_user', 'PagesController@edit_user');
+    Route::get('/user/edit', 'PagesController@edit_user');
 });
+
+Route::get('/cart', 'CartController@index');
+Route::get('/cart/add/{id}', 'CartController@addItem');
+Route::get('/cart/remove/{id}', 'CartController@removeItem');
+Route::get('/cart/update/', 'CartController@update');
 
 Route::get('/search', 'PagesController@search');
 

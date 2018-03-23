@@ -57,7 +57,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        return view('users.edit'); 
+        $user = Post::find($id);  
+        // if(auth()->user()->id !== $user->user_id){
+        //     return redirect('/posts')->with('error', 'Unauthorized access!');
+        // } 
+        return view('users.edit')->with('user',$user);
     }
 
     /**

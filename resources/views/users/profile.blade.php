@@ -10,10 +10,10 @@
                 <div class="col-lg-12">
                     <div class="col-lg-4" style="float: left;">
                         <div class="card"><br><br>
-                            <div id="phone-card-img"><img class="card-img-top" src="/images/user.png" alt="Card image cap"></div>
+                            <div id="user-card-img" style="border-radius: 50%;"><img class="card-img-top" src="/images/user.png" alt="Card image cap"></div>
                             <div class="card-body">
+                                <!-- <h5 class="card-title text-center">Upload profie picture</h5> -->
                             </div>
-
                         </div> 
                         
                     </div>	
@@ -25,7 +25,7 @@
                                     <li class="list-group-item"><i class="fas fa-user-circle"></i><b> Username : </b>{{ Auth::user()->name }} </li>
                                     <li class="list-group-item"><i class="fas fa-envelope"></i><b> Email : </b>{{ Auth::user()->email }} </li>                                
                                 </ul><br>
-                                <a href="/edit_user" class="btn btn-outline-info btn-rounded waves-effect btn-md" style="width: 150px;margin:auto;">Edit profile</a><br><br> 
+                                <a href="/user/edit" class="btn btn-outline-info btn-sm" style="margin:auto;float: right;">Edit profile</a><br><br><br><br> 
                             </div>
                         </div>           
                     </div>

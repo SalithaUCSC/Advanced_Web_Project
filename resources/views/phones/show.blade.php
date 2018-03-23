@@ -21,13 +21,13 @@
                         <img src="/storage/phones/{{ $phone->image1 }}" id="show-phone">
                         <div class="row">
                             <div class="col-lg-4"><br>
-                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image1 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image1 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
+                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image2 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image2 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
                             </div>
                             <div class="col-lg-4"><br>
-                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image1 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image1 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
+                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image3 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image3 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
                             </div>
                             <div class="col-lg-4"><br>
-                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image1 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image1 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
+                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image4 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image4 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
                             </div>                           
                         </div><br>
                         <button type="button" class="btn btn-danger btn-block btn-md">Compare</button><br>

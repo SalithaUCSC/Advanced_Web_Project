@@ -38,6 +38,11 @@ html.lb-disable-scrolling {
   border: 4px solid white;
 }
 
+.lb-image {
+  width: 500px !important;
+  height: 500px !important;
+}
+
 .lightbox a img {
   border: none;
 }

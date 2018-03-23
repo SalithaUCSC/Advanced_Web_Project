@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
     {{--  <link href="{{ asset('css/lumenBootstrap.min.css') }}" rel="stylesheet">  --}}
     <!-- Font Awesome -->
-    {{--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
@@ -40,8 +40,10 @@
     <script src="{{ asset('js/font-awesome/fontawesome-all.min.js') }}"></script>
       <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('dropify/js/dropify.js' )}}"></script>
-    <script type="text/javascript">
+        @yield('jscode')
+        <script type="text/javascript">
         $(document).ready(function() {
+            
             $('.dropify').dropify();
 
             $(function () {
@@ -50,6 +52,11 @@
                     source: 'http://localhost:8000/search'
                 });
             });
+
+
+            // $('#pic-btn').on('click', function(){
+            //     $('#upload-pic-form').show();
+            // });
 
             $('#searchBtn').on('click', function () {
                 var name = $('#search-item').val();
@@ -66,8 +73,11 @@
                     {{--}--}}
                 {{--});--}}
             });
+
+
         });
     </script>
+
 
     {{--  <script>
       $('#search-form').submit(function(){

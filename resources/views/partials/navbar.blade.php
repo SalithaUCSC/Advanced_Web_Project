@@ -23,6 +23,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/posts">Blog</a>
                 </li>
+                <li class="{{ Request::is('cart') ? 'nav-item active' : '' }}">
+                    <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i> Cart ({{Cart::count()}})</a>
+                </li>
                 <li class="{{ Request::is('login') ? 'nav-item active' : '' }}"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                 <li class="{{ Request::is('register') ? 'nav-item active' : '' }}"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
             @else
@@ -45,9 +48,9 @@
                         <a class="nav-link" href="/profile">
                             Profile 
                         </a>
-                    </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                </li>
+                <li class="{{ Request::is('cart') ? 'nav-item active' : '' }}">
+                    <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i> Cart ({{Cart::count()}})</a>
                 </li>
                 <li class="nav-item">                                
                     <a class="nav-link" href="{{ route('logout') }}"

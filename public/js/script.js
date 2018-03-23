@@ -26,6 +26,8 @@ $(document).ready(function() {
 	    })
 	});
 
+	  
+
 	// (function(){
 	// 		const currentImage = document.querySelector('#currentImage');
 	// 		const image = document.querySelectorAll('.img-gallery');
