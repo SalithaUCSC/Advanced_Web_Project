@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2018 at 02:57 AM
+-- Generation Time: Mar 23, 2018 at 12:53 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -92,6 +92,9 @@ CREATE TABLE `phones` (
   `cam_secondary` varchar(40) NOT NULL,
   `battery` varchar(30) NOT NULL,
   `image1` varchar(300) NOT NULL,
+  `image2` varchar(300) NOT NULL,
+  `image3` varchar(300) NOT NULL,
+  `image4` varchar(300) NOT NULL,
   `released_time` varchar(50) NOT NULL,
   `price` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -100,16 +103,16 @@ CREATE TABLE `phones` (
 -- Dumping data for table `phones`
 --
 
-INSERT INTO `phones` (`phone_id`, `name`, `brand`, `dimension`, `sim`, `display_type`, `display_size`, `resolution`, `os`, `chipset`, `cpu`, `gpu`, `cardslot`, `internal`, `ram`, `cam_primary`, `cam_secondary`, `battery`, `image1`, `released_time`, `price`) VALUES
-(1, 'Huawei GR5 2017', 'Huawei', '150.9 x 76.2 x 8.2 mm', 'Hybrid Dual SIM (Nano-SIM, dual stand-by)', 'LTPS IPS LCD 16M colors', '5.5 inches', '1080 x 1920 pixels', 'Android 6.0 (Marshmallow)', 'HiSilicon Kirin 655', 'Octa-core', 'Mali-T830MP2', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '12 MP + 2MP', '8 MP', '3340mAh', '1.png', '2016, October', '27600 '),
-(2, 'Samsung Galaxy J7 Prime', 'Samsung', '151.7 x 75 x 8 mm', 'Single SIM (Nano-SIM) or Dual SIM', 'PLS TFT 16M colors', '5.5 inches', '1080 x 1920 pixels', 'Android 6.0.1 (Marshmallow)', 'Exynos 7870 Octa', 'Octa-core 1.6 GHz ', 'Mali-T830 MP1', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '13 MP ', '8 MP', '3300mAh', '2.png', '2016, August', '29800'),
-(3, 'Apple iPhone 7', 'Apple', '138.3 x 67.1 x 7.1 mm', 'Nano-SIM', 'LED-backlit IPS LCD 16M colors', '4.7 inches', '750 x 1334 pixels', 'iOS 10.0.1', 'Apple A10 Fusion', 'Quad-core 2.34 GHz', 'PowerVR Series7XT Plus', 'No', '32 GB', '2 GB RAM', '12 MP', '7 MP ', '1960mAh', '3.png', '2016, September', '110000'),
-(4, 'HTC Desire 628', 'HTC', '146.9 x 70.9 x 8.1 mm', 'Dual SIM (Nano-SIM, dual stand-by)', 'IPS LCD 16M colors', '5.0 inches', '720 x 1280 pixels', 'Android 5.1 (Lollipop)', 'Mediatek MT6753', 'Octa-core 1.3 GHz Cortex-A53', 'Mali-T720MP3', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '13 MP', '5 MP', '2200mAh', '4.png', '2016, May', '22300'),
-(5, 'Huawei Nova 2', 'Huawei', '142.2 x 68.9 x 6.9 mm', 'Hybrid Dual SIM (Nano-SIM, dual stand-by)', 'LTPS IPS LCD 16M colors', '5.0 inches', '1080 x 1920 pixels', 'Android 7.0 (Nougat)', 'HiSilicon Kirin 659', 'Octa-core', 'Mali-T830 MP2', 'microSD, up to 256 GB', '64 GB', '4 GB RAM', '12 MP + 8 MP', '20 MP', '2950mAh', '5.png', '2017, May', '37300'),
-(6, 'Sony Xperia XZ', 'Sony', '146 x 72 x 8.1 mm', 'Single SIM (Nano-SIM) or Hybrid Dual SIM', 'IPS LCD 16M colors', '5.2 inches', '1080 x 1920 pixels', 'Android 6.0.1 (Marshmallow)', 'Qualcomm MSM8996 Snapdragon 820', 'Quad-core', 'Adreno 530', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '23 MP', '13MP', '2900mAh', '6.png', '2016, October', '53900 '),
-(7, 'Samsung Galaxy J7 Max', 'Samsung', '148.9 x 71.9 x 7.9 mm', 'Dual SIM (Nano-SIM, dual stand-by)', 'PLS 16M colors', '5.7 inches', '1080 x 1920 pixels', 'Android 7.0 (Nougat)', 'Mediatek MT6757 Helio P20', 'Octa-core 2.4 GHz', 'Mali-T880MP2', 'microSD, up to 256 GB', '32GB', '4GB RAM', '13 MP', '13 MP', '3300mAh', '7.png', '2017, June', ' 32300 '),
-(8, 'HTC ONE A9S ', 'HTC', '146.5 x 71.5 x 8 mm', 'Nano-SIM', 'Super LCD 16M colors', '5.0 inches', '720 x 1280 pixels', 'Android 6.0 (Marshmallow)', 'Mediatek MT6755 Helio P10', 'Octa-core', 'Mali-T860MP2', 'microSD, up to 256 GB', '32GB', '3GB RAM', '13MP', '5 MP', '2300mAh', '8.png', '2016, September', '31900 '),
-(9, 'Sony Xperia XA1', 'SONY', '145 x 67 x 8 mm', 'Single SIM (Nano-SIM) or Dual SIM', 'IPS LCD 16M colors', '5.0 inches', '720 x 1280 pixels', 'Android 7.0 (Nougat)', 'Mediatek MT6757 Helio P20', 'Octa-core', 'Mali-T880MP2', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '23 MP', '8 MP', '2300mAh', '9.png', '2017, April', '33000');
+INSERT INTO `phones` (`phone_id`, `name`, `brand`, `dimension`, `sim`, `display_type`, `display_size`, `resolution`, `os`, `chipset`, `cpu`, `gpu`, `cardslot`, `internal`, `ram`, `cam_primary`, `cam_secondary`, `battery`, `image1`, `image2`, `image3`, `image4`, `released_time`, `price`) VALUES
+(1, 'Huawei GR5 2017', 'Huawei', '150.9 x 76.2 x 8.2 mm', 'Hybrid Dual SIM (Nano-SIM, dual stand-by)', 'LTPS IPS LCD 16M colors', '5.5 inches', '1080 x 1920 pixels', 'Android 6.0 (Marshmallow)', 'HiSilicon Kirin 655', 'Octa-core', 'Mali-T830MP2', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '12 MP + 2MP', '8 MP', '3340mAh', '1.png', '', '', '', '2016, October', '27500'),
+(2, 'Samsung Galaxy J7 Prime', 'Samsung', '151.7 x 75 x 8 mm', 'Single SIM (Nano-SIM) or Dual SIM', 'PLS TFT 16M colors', '5.5 inches', '1080 x 1920 pixels', 'Android 6.0.1 (Marshmallow)', 'Exynos 7870 Octa', 'Octa-core 1.6 GHz ', 'Mali-T830 MP1', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '13 MP ', '8 MP', '3300mAh', '2.png', '', '', '', '2016, August', '28800'),
+(3, 'Apple iPhone 7', 'Apple', '138.3 x 67.1 x 7.1 mm', 'Nano-SIM', 'LED-backlit IPS LCD 16M colors', '4.7 inches', '750 x 1334 pixels', 'iOS 10.0.1', 'Apple A10 Fusion', 'Quad-core 2.34 GHz', 'PowerVR Series7XT Plus', 'No', '32 GB', '2 GB RAM', '12 MP', '7 MP ', '1960mAh', '3.png', '', '', '', '2016, September', '110000'),
+(4, 'HTC Desire 628', 'HTC', '146.9 x 70.9 x 8.1 mm', 'Dual SIM (Nano-SIM, dual stand-by)', 'IPS LCD 16M colors', '5.0 inches', '720 x 1280 pixels', 'Android 5.1 (Lollipop)', 'Mediatek MT6753', 'Octa-core 1.3 GHz Cortex-A53', 'Mali-T720MP3', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '13 MP', '5 MP', '2200mAh', '4.png', '', '', '', '2016, May', '22300'),
+(5, 'Huawei Nova 2', 'Huawei', '142.2 x 68.9 x 6.9 mm', 'Hybrid Dual SIM (Nano-SIM, dual stand-by)', 'LTPS IPS LCD 16M colors', '5.0 inches', '1080 x 1920 pixels', 'Android 7.0 (Nougat)', 'HiSilicon Kirin 659', 'Octa-core', 'Mali-T830 MP2', 'microSD, up to 256 GB', '64 GB', '4 GB RAM', '12 MP + 8 MP', '20 MP', '2950mAh', '5.png', '', '', '', '2017, May', '37300'),
+(6, 'Sony Xperia XZ', 'Sony', '146 x 72 x 8.1 mm', 'Single SIM (Nano-SIM) or Hybrid Dual SIM', 'IPS LCD 16M colors', '5.2 inches', '1080 x 1920 pixels', 'Android 6.0.1 (Marshmallow)', 'Qualcomm MSM8996 Snapdragon 820', 'Quad-core', 'Adreno 530', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '23 MP', '13MP', '2900mAh', '6.png', '', '', '', '2016, October', '53900'),
+(7, 'Samsung Galaxy J7 Max', 'Samsung', '148.9 x 71.9 x 7.9 mm', 'Dual SIM (Nano-SIM, dual stand-by)', 'PLS 16M colors', '5.7 inches', '1080 x 1920 pixels', 'Android 7.0 (Nougat)', 'Mediatek MT6757 Helio P20', 'Octa-core 2.4 GHz', 'Mali-T880MP2', 'microSD, up to 256 GB', '32GB', '4GB RAM', '13 MP', '13 MP', '3300mAh', '7.png', '', '', '', '2017, June', '32300'),
+(8, 'HTC ONE A9S ', 'HTC', '146.5 x 71.5 x 8 mm', 'Nano-SIM', 'Super LCD 16M colors', '5.0 inches', '720 x 1280 pixels', 'Android 6.0 (Marshmallow)', 'Mediatek MT6755 Helio P10', 'Octa-core', 'Mali-T860MP2', 'microSD, up to 256 GB', '32GB', '3GB RAM', '13MP', '5 MP', '2300mAh', '8.png', '', '', '', '2016, September', '31900'),
+(9, 'Sony Xperia XA1', 'SONY', '145 x 67 x 8 mm', 'Single SIM (Nano-SIM) or Dual SIM', 'IPS LCD 16M colors', '5.0 inches', '720 x 1280 pixels', 'Android 7.0 (Nougat)', 'Mediatek MT6757 Helio P20', 'Octa-core', 'Mali-T880MP2', 'microSD, up to 256 GB', '32 GB', '3 GB RAM', '23 MP', '8 MP', '2300mAh', '9.png', '1_2.jpg', '1_3.png', '1_4.png', '2017, April', '33000');
 
 -- --------------------------------------------------------
 
@@ -119,7 +122,7 @@ INSERT INTO `phones` (`phone_id`, `name`, `brand`, `dimension`, `sim`, `display_
 
 CREATE TABLE `phone_brands` (
   `brand_id` int(5) NOT NULL,
-  `brand_name` varchar(20) NOT NULL,
+  `brand` varchar(20) NOT NULL,
   `brand_image` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -127,7 +130,7 @@ CREATE TABLE `phone_brands` (
 -- Dumping data for table `phone_brands`
 --
 
-INSERT INTO `phone_brands` (`brand_id`, `brand_name`, `brand_image`) VALUES
+INSERT INTO `phone_brands` (`brand_id`, `brand`, `brand_image`) VALUES
 (1, 'Huawei', 'huawei.png'),
 (2, 'Apple', 'apple.png'),
 (3, 'Samsung', 'samsung.png'),
@@ -156,7 +159,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `body`, `created_at`, `updated_at`, `user_id`, `username`, `cover_image`) VALUES
-(1, 'Post 1', '<p>xxx</p>', '2018-03-15 15:03:22', '2018-03-15 15:03:59', 1, 'salitha', 'angular_1521146002.jpeg'),
+(1, 'Post 1', '<p>Hello</p>', '2018-03-15 15:03:22', '2018-03-20 22:44:38', 1, 'salitha', 'angular_1521146002.jpeg'),
 (2, 'Post 2', '<p>xxxxxxxxxx</p>', '2018-03-16 02:36:00', '2018-03-16 02:36:00', 2, 'Jaadu', 'php_1521187560.jpg'),
 (3, 'Post 3', '<p>aaaaaaaaaaa</p>', '2018-03-16 02:36:58', '2018-03-16 02:36:58', 3, 'palan', 'bootstrap_1521187618.jpeg'),
 (4, 'Post 4', '<p>wwwwwwww</p>', '2018-03-16 02:38:47', '2018-03-16 02:38:47', 1, 'salitha', 'ci_1521187727.png');
@@ -182,9 +185,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'salitha', 'poolsaliya@gmail.com', '$2y$10$bZPYU6Ky8n5WxqP1Tti4/.8In32TiHG51MUtse/ZkjX4uJE7kJZJC', 'JijynisRIJkcmqmlYaXwMcjojP6NZMJTKJSWjdC6LXokodv0fhrne6E631IQ', '2018-03-15 14:38:53', '2018-03-15 14:38:53'),
+(1, 'salitha', 'poolsaliya@gmail.com', '$2y$10$bZPYU6Ky8n5WxqP1Tti4/.8In32TiHG51MUtse/ZkjX4uJE7kJZJC', '5jS1uD0SZmVGKRn9mp53kaejeHgACsUqVUHmyAKoTZWe10joeMbwue3gTijE', '2018-03-15 14:38:53', '2018-03-15 14:38:53'),
 (2, 'Jaadu', 'dewram@gmail.com', '$2y$10$auMNwdk3zkMg2A182kP27exH.bHF4A625Vdh0yxy.QlHMP8IDB8By', '1eeelh0FqoYbh0lzhf4N8xwWEPoDH5nWpIH1Ag9auTUHdWqk5CQeOeZ1hugF', '2018-03-16 02:35:20', '2018-03-16 02:35:20'),
-(3, 'palan', 'lasithahiranjan@gmail.com', '$2y$10$a9LuC56enKfexUsELXVFFO/04.oZKsM46leI8KS6ErCDoGop/C4pS', '7hm3VAIBc8TSCbpUf4UdlT8YygLFLtS9XE0Xenq7cKkcu5KEdEUulU6R6iHU', '2018-03-16 02:36:39', '2018-03-16 02:36:39');
+(3, 'palan', 'lasithahiranjan@gmail.com', '$2y$10$a9LuC56enKfexUsELXVFFO/04.oZKsM46leI8KS6ErCDoGop/C4pS', '7hm3VAIBc8TSCbpUf4UdlT8YygLFLtS9XE0Xenq7cKkcu5KEdEUulU6R6iHU', '2018-03-16 02:36:39', '2018-03-16 02:36:39'),
+(4, 'dulitha', 'dulithaperera@gmail.com', '$2y$10$U4v4MLiS3vfZhBJnXdWLY.jn1yPQ8Iyf..OQ.X6VfuxJP7rRphLUS', 'vJBBt7JdfFjy8JVt2fSvzBSmKIRfW0eSVJtOpinFX5GeWxztrLR0IfS8h5k5', '2018-03-23 08:22:14', '2018-03-23 08:22:14');
 
 --
 -- Indexes for dumped tables
@@ -253,13 +257,13 @@ ALTER TABLE `phone_brands`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
