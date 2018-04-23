@@ -29,4 +29,9 @@ class ForgotPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    public function showResetForm(){
+        $title = 'Reset Password';
+        return view('auth.passwords.email', ['title' => $title]);
+    }
 }

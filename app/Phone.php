@@ -18,5 +18,11 @@ class Phone extends Model
         return $this->belongsTo('App\Brand');
     }
 
+    public function reviews(){
+        return $this->hasMany('App\Review');
+    }
 
+    public function wishesGet(){
+        return $this->hasMany('App\WishList');
+    }
 }

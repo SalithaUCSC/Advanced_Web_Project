@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Post;
+use Alert;
+use App\WishList;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
@@ -20,8 +23,12 @@ class PostsController extends Controller
 
     public function index()
     {
+        $wishes = '';
         $posts = Post::orderBy('id','desc')->paginate(5);
-        return view('posts.index')->with('posts',$posts)->withTitle('Blog');   
+        if (Auth::check()) {
+            $wishes = WishList::where('user_id', '=', auth()->user()->id)->get();
+        }
+        return view('posts.index', ['posts' => $posts, 'wishes' => $wishes])->withTitle('Blog');
     }
 
     /**
@@ -31,7 +38,11 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create')->withTitle('Create a Post');  
+        $wishes = '';
+        if (Auth::check()) {
+            $wishes = WishList::where('user_id', '=', auth()->user()->id)->get();
+        }
+        return view('posts.create', ['wishes' => $wishes])->withTitle('Create a Post');
     }
 
     /**
@@ -71,8 +82,10 @@ class PostsController extends Controller
         $post->user_id = auth()->user()->id;
         $post->username = auth()->user()->name;
         $post->save();
+        Alert::success('keep in touch..', 'Your post is submitted to publish!');
         // redirect to the create page with success message
-        return redirect('/posts/create')->with('success', 'Post created');
+        return redirect()->back();
+//        return redirect('/posts/create')->with('success', 'Post created');
     }
 
     /**
@@ -83,8 +96,12 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);   
-        return view('posts.show')->with('post',$post)->withTitle('Post Details');   
+        $post = Post::find($id);
+        if (Auth::check()) {
+            $wishes = WishList::where('user_id', '=', auth()->user()->id)->get();
+        }
+        $wishes = '';
+        return view('posts.show', ['wishes' => $wishes, 'post' => $post])->withTitle('Post Details');
     }
 
     /**
@@ -96,11 +113,15 @@ class PostsController extends Controller
     public function edit($id)
     {
 
-        $post = Post::find($id);  
+        $post = Post::find($id);
+        if (Auth::check()) {
+            $wishes = WishList::where('user_id', '=', auth()->user()->id)->get();
+        }
+        $wishes = '';
         if(auth()->user()->id !== $post->user_id){
             return redirect('/posts')->with('error', 'Unauthorized access!');
         } 
-        return view('posts.edit')->with('post',$post)->withTitle('Edit Post');   
+        return view('posts.edit', ['wishes' => $wishes, 'post' => $post])->withTitle('Edit Post');
     }
 
     /**
@@ -139,8 +160,8 @@ class PostsController extends Controller
         }
 
         $post->save();
-
-        return redirect('/posts')->with('success', 'Post updated');
+        Alert::success('create more..', 'Post updated!');
+        return redirect('/posts');
     }
 
     /**
@@ -159,6 +180,7 @@ class PostsController extends Controller
             Storage::delete('public/cover_images/'.$post->cover_image);
         }
         $post->delete();
-        return redirect('/posts')->with('success', 'Post deleted');
+        Alert::error('add another one', 'Post deleted!');
+        return redirect('/posts');
     }
 }

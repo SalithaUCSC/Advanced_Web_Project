@@ -1,0 +1,1 @@
+$('#addwishForm').hide('fast');

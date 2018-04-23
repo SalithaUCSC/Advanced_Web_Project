@@ -3,7 +3,7 @@
 @section('content')
 
 @include('partials.navbar_noscroll')
-    <div class="container">
+    <div class="container" style="min-height: 1000px;">
         <h1 style="margin-top: 80px;" class="text-center">Blog Posts</h1><br>
         @include('partials.messages')
         @if(count($posts)>0)
@@ -15,15 +15,15 @@
                         </div>
                         <div class="col-lg-8">
                             <div class="card-header">
-                                    <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
-                                </div>
-                                <div class="card-body">
-                                    {!!$post->body!!}
-                                </div>
-                                <div class="card-footer">
-                                    <p class="card-text">Written by <b>{{$post->username}}</b></p> 
-                                    <p class="card-text">Published on {{ date('M j, Y h:ia', strtotime($post->created_at) )}}</p>  
-                            </div>                            
+                                <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
+                            </div>
+                            <div class="card-body">
+                                {!!$post->body!!}
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text">Written by <b>{{$post->username}}</b></p>
+                                <p class="card-text">Published on {{ date('M j, Y h:ia', strtotime($post->created_at) )}}</p>
+                            </div>
                         </div>
                     </div>
 

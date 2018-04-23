@@ -25,7 +25,6 @@
                             <div style="float: left;">
                                 <a href="/posts/{{$post->id}}/edit" class="btn btn-warning btn-md float-left" style="margin-right:20px;"><i class="fas fa-edit"></i> Edit</a>
                                 {{--<a href="/posts" class="btn btn-outline-dark btn-md"><i class="fas fa-arrow-alt-circle-left"></i> Go Back</a>--}}
-
                             </div>
                             <div style="float: right;">
                                 {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST']) !!}

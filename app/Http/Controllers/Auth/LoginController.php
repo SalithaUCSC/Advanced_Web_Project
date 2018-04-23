@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use App\User;
+use Socialite;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -25,15 +27,63 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/phones';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToGoogleProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleGoogleProviderCallback()
+    {
+        try{
+            $user = Socialite::driver('google')->user();
+        }catch (Exception $e) {
+            return redirect('login/google');
+        }
+
+        $authUser = $this->CreateUser($user);
+        Auth::login($authUser, true);
+        return redirect()->route('phones');
+    }
+
+    public function CreateUser($user)
+    {
+        $authUser = User::where('email', $user->email)->first();
+        if ($authUser) {
+            return $authUser;
+        }
+        return User::create([
+            'name'     => $user->name,
+            'google_id' => $user->getId(),
+            'email'    => $user->email,
+            'avatar' => $user->avatar
+        ]);
+    }
+
+    public function showLoginForm(){
+        return view('auth.login')->withTitle('Login');
+    }
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
 }
+

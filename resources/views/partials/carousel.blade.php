@@ -11,7 +11,7 @@
 	        <div class="carousel-caption d-none d-md-block text-left">
 			    <p id="captionH" class="animated slideInLeft">Find mobile phones</p>
 			    <p id="captionSm" class="animated slideInLeft">at reasonable prices</p><br>
-			    <a href="#about" class="btn btn-cyan scroll animated slideInLeft">More</a>
+			    <a href="#about" class="btn btn-cyan btn-md scroll animated slideInLeft">More</a>
 		  	</div>
 	    </div>
 	    <div class="carousel-item">
@@ -19,7 +19,7 @@
 	        <div class="carousel-caption d-none d-md-block text-right">
 			    <p id="captionH" class="animated slideInRight">Get the perfect choice</p>
 			    <p id="captionSm" class="animated slideInRight">according to your requirements</p><br>
-			    <a href="#about" class="btn btn-cyan scroll animated slideInRight">More</a>
+			    <a href="#about" class="btn btn-cyan btn-md scroll animated slideInRight">More</a>
 		  	</div>	      
 	    </div>
 	    <div class="carousel-item">
@@ -27,7 +27,7 @@
 	        <div class="carousel-caption d-none d-md-block text-left">
 			    <p id="captionH" class="animated slideInLeft">Order mobile phones</p>
 			    <p id="captionSm" class="animated slideInLeft">with your favourite designs</p><br>
-			    <a href="#about" style="margin-bottom: 30px;" class="btn btn-cyan scroll animated slideInUp">More</a>
+			    <a href="#about" style="margin-bottom: 30px;" class="btn btn-cyan btn-md scroll animated slideInUp">More</a>
 			    <br>
 		  	</div>
 	    </div>

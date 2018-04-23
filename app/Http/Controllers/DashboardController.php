@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\WishList;
+
 class DashboardController extends Controller
 {
     /**
@@ -25,6 +27,7 @@ class DashboardController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('dashboard')->with('posts', $user->posts);
+        $wishes = WishList::where('user_id', '=', auth()->user()->id)->get();
+        return view('dashboard', ['posts' => $user->posts, 'wishes' => $wishes])->withTitle('Dashboard');;
     }
 }

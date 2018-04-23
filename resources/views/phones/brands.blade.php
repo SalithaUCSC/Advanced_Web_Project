@@ -4,7 +4,8 @@
 
     @include('partials.navbar_noscroll')
     <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 100px">
-        <h2 class="card-head text-center" id="card-head-phn">CATEGORIZED MOBILE PHONES</h2><br>
+        <h2 class="card-head text-center" id="card-head-phn">{{ strtoupper($brand->brand)}} MOBILE PHONES</h2><br>
+        <h5 class="text-center">{{ count($phone) }} record(s) found</h5><br>
             <div class="container">
                 <div class="row">
                     @foreach ($phone as $phn)
@@ -14,7 +15,7 @@
                                 <div class="card-body">
                                     <a id="phone-path" href="/phones/{{ $phn->phone_id }}"><h5 class="card-title text-center">{{ $phn->name }}</h5></a><br>
                                     <button  style="float: left: font-size: 18px;" class="btn btn-dark btn-md">Rs. {{ $phn->price }}</button>
-                                    <button style="float: right;" id="add-cart" class="btn btn-dark-green btn-md">Add</button>
+                                    <button style="float: right;" id="add-cart" class="btn btn-primary btn-md">Add</button>
                                 </div>
                             </div>
                         </div>

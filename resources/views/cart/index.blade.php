@@ -3,18 +3,14 @@
 @section('content')
 
     @include('partials.navbar_noscroll')
-    <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 100px">
-        <h4 class="text-center" id="card-head-phn"> Shopping cart</h4><br>
+    <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 100px; min-height: 1000px;">
+        <h3 class="text-center" id="card-head-phn"> SHOPPING CART</h3><br>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     @if(count($data) != 0)
-{{--                        {{Cart::content()}}--}}
                     <div class="col-lg-9" style="float: left;">
-                        @if(isset($msg))
-                        <div class="alert alert-success cart-msg"></div>
-                        @endif
-                        <div class="alert alert-success cart-msg"></div>
+                        <?php $count = 1;?>
                         @foreach($data as $row)
                         <div class="card" >
                             <div class="card-body">
@@ -28,14 +24,23 @@
                                                 <table class="table">
                                                     <tr>
                                                         <th width="200px;"><h5 class="card-title">{{$row->name}}</h5></th>
-                                                        <th width="200px;"><div class="cart-qty"><span>Qty : </span><input
-                                                                        type="number" value="{{$row->qty}}" class="qty-fill" style="width: 60px;" id="upCart{{$row->id}}"></div></th>
+                                                        <th width="200px;" class="cart_quantity">
+                                                            <div class="cart_quantity_button">
+
+                                                                <input type="hidden" value="{{$row->rowId}}" id="rowId{{ $count }}">
+                                                                <input type="hidden" value="{{$row->id}}" id="id{{ $count }}">
+                                                                <input type="number" size="2" min="0" value="{{$row->qty}}" name="qty" id="upCart{{ $count }}">
+                                                                <br>
+
+                                                            </div>
+
+                                                        </th>
                                                         <th width="200px;" class="text-left">Unit Price : {{$row->price}}</th>
                                                     </tr>
                                                     <tr>
                                                         <input type="hidden" value="{{$row->rowId}}" id="rowID{{$row->id}}">
-                                                        <td><a class="btn btn-warning btn-sm">Update</a></td>
-                                                        <td><a href="{{url('/cart/remove')}}/{{$row->rowId}}" class="btn btn-danger btn-sm">Remove</a></td>
+                                                        <td><a href="{{url('/cart/remove')}}/{{$row->rowId}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Remove</a></td>
+                                                        <td><a href="/cart" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> update</a></td>
                                                         <td><b>Total : {{$row->price *$row->qty}}</b></td>
                                                     </tr>
                                                 </table>
@@ -46,6 +51,7 @@
                             </div>
                         </div>
                             <br>
+                                <?php $count++; ?>
                         @endforeach
                     </div>
                     <div class="col-lg-3" style="float: right;">
@@ -58,10 +64,6 @@
                                         <td class="text-right">{{Cart::subtotal()}}</td>
                                     </tr>
                                     <tr>
-                                        <th class="text-left">Tax</th>
-                                        <td class="text-right">{{Cart::tax()}}</td>
-                                    </tr>
-                                    <tr>
                                         <th class="text-left">Total</th>
                                         <td class="text-right">{{Cart::total()}}</td>
                                     </tr>
@@ -71,9 +73,9 @@
                                     </tr>
                                 </table>
                                 <hr>
-                                <a href="/phones" class="btn btn-outline-dark btn-block btn-md" style="margin-bottom: 10px;">CONTINUE SHOPPING</a>
+                                <a href="/phones" class="btn btn-outline-dark btn-block btn-md" style="margin-bottom: 10px;"><i class="fas fa-shopping-cart"></i> CONTINUE SHOPPING</a>
                                 <br>
-                                <button class="btn btn-block btn-dark btn-md">CHECKOUT</button>
+                                <a href="/cart/checkout" class="btn btn-block btn-dark btn-md"><i class="fas fa-money-bill-alt"></i> CHECKOUT</a>
                             </div>
                         </div>
                     </div>
