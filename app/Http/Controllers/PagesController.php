@@ -175,7 +175,7 @@ class PagesController extends Controller
                 foreach ($data as $p){
                     $output .= '
                     <div class="card" id="phone-card"><br>
-                                    <div id="phone-card-img"><img class="card-img-top" id="phone-img" src="/storage/phones/'.$p->image1.'" alt="Card image cap"></div>
+                                    <div id="phone-card-img"><img class="card-img-top" id="phone-img" src="/images/phones/'.$p->image1.'" alt="Card image cap"></div>
                                     <div class="card-body">
                                         <a id="phone-path" href="/phones/'.$p->phone_id.'"><h5 class="card-title text-center">'.$p->name.'</h5></a><br>
                                         <button  class="btn btn-dark btn-sm" style="font-size: 12px;">Rs. '.$p->price.'</button>
