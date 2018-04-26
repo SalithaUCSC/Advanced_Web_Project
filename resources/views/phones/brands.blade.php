@@ -11,7 +11,7 @@
                     @foreach ($phone as $phn)
                         <div class="col-lg-3 col-md-4 col-sm-6" id="phone-card">
                             <div class="card" id="phone-card"><br>
-                                <div id="phone-card-img"><img class="card-img-top" id="phone-img" src="/storage/phones/{{$phn->image1}}" alt="Card image cap"></div>
+                                <div id="phone-card-img"><img class="card-img-top" id="phone-img" src="/images/phones/{{$phn->image1}}" alt="Card image cap"></div>
                                 <div class="card-body">
                                     <a id="phone-path" href="/phones/{{ $phn->phone_id }}"><h5 class="card-title text-center">{{ $phn->name }}</h5></a><br>
                                     <button  style="float: left: font-size: 18px;" class="btn btn-dark btn-md">Rs. {{ $phn->price }}</button>
