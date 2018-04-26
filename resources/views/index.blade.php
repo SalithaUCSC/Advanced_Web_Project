@@ -12,7 +12,7 @@
 
             <div class="row">
                 <div class="col-lg-3">
-                    <img src="/storage/phones/3.png" class="img-thumbnail" style="width:200px; height: 200px">
+                    <img src="/images/phones/3.png" class="img-thumbnail" style="width:200px; height: 200px">
                 </div>
                 <div class="col-lg-9">
                     <h1>WELCOME TO MOBILE4U</h1>
@@ -25,16 +25,16 @@
                 </div>
 
                 <div class="col-lg-4"><br>
-                    <center><img src="/storage/search.png" style="width:150px; height: 150px;"></center><br><br><h4 class="text-center">SEARCH</h4>
+                    <center><img src="/images/search.png" style="width:150px; height: 150px;"></center><br><br><h4 class="text-center">SEARCH</h4>
                 </div>
                 {{--<div class="col-lg-3"><br>--}}
-                    {{--<img src="/storage/blog.png" style="width:150px; height: 150px;"><br><br><h4 class="text-center">BLOG</h4>--}}
+                    {{--<img src="/images/blog.png" style="width:150px; height: 150px;"><br><br><h4 class="text-center">BLOG</h4>--}}
                 {{--</div>--}}
                 <div class="col-lg-4"><br>
-                    <center><img src="/storage/review.png" style="width:150px; height: 150px;"></center><br><br><h4 class="text-center">REVIEW</h4>
+                    <center><img src="/images/review.png" style="width:150px; height: 150px;"></center><br><br><h4 class="text-center">REVIEW</h4>
                 </div>
                 <div class="col-lg-4"><br>
-                    <center><img src="/storage/cart.png" style="width:150px; height: 150px;"></center><br><br><h4 class="text-center">BUY</h4>
+                    <center><img src="/images/cart.png" style="width:150px; height: 150px;"></center><br><br><h4 class="text-center">BUY</h4>
                 </div>
             </div>
         </div>
@@ -61,18 +61,18 @@
                 <div class="carousel-item active" style="padding-top: 50px; padding-bottom: 50px;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/9.png"><div class="card-body"><h5 class="card-title text-center">Sony Xperia XA1</h5></div></div></div>
-                            {{--<div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/2.png"></div><div class="card-body"><h5 class="card-title text-center">Sony Xperia XA1</h5></div></div>--}}
-                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/7.png"><div class="card-body"><h5 class="card-title text-center">Samsung Galaxy J7 Max</h5></div></div></div>
+                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/9.png"><div class="card-body"><h5 class="card-title text-center">Sony Xperia XA1</h5></div></div></div>
+                            {{--<div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/2.png"></div><div class="card-body"><h5 class="card-title text-center">Sony Xperia XA1</h5></div></div>--}}
+                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/7.png"><div class="card-body"><h5 class="card-title text-center">Samsung Galaxy J7 Max</h5></div></div></div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item" style="padding-top: 50px; padding-bottom: 50px;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/6.png"><div class="card-body"><h5 class="card-title text-center">Sony Xperia XZ</h5></div></div></div>
-                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/5.png"><div class="card-body"><h5 class="card-title text-center">Huawei Nova 2i</h5></div></div></div>
-                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/4.png"><div class="card-body"><h5 class="card-title text-center">HTC Desire 628</h5></div></div></div>
+                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/6.png"><div class="card-body"><h5 class="card-title text-center">Sony Xperia XZ</h5></div></div></div>
+                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/5.png"><div class="card-body"><h5 class="card-title text-center">Huawei Nova 2i</h5></div></div></div>
+                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/4.png"><div class="card-body"><h5 class="card-title text-center">HTC Desire 628</h5></div></div></div>
                         </div>
                     </div>
 
@@ -80,9 +80,9 @@
                 <div class="carousel-item" style="padding-top: 50px; padding-bottom: 50px;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/3.png"><div class="card-body"><h5 class="card-title text-center">Apple iPhone 7</h5></div></div></div>
-                            {{--<div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/2.png"><div class="card-body"><h5 class="card-title text-center">Sony Xperia XA1</h5></div></div></div>--}}
-                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/storage/phones/1.png"><div class="card-body"><h5 class="card-title text-center">Huawei GR5 2017</h5></div></div></div>
+                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/3.png"><div class="card-body"><h5 class="card-title text-center">Apple iPhone 7</h5></div></div></div>
+                            {{--<div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/2.png"><div class="card-body"><h5 class="card-title text-center">Sony Xperia XA1</h5></div></div></div>--}}
+                            <div class="col-lg-4"><div class="card" style="height: 400px;"><br><img style="width:300px; height: 300px;" class="d-block w-100" src="/images/phones/1.png"><div class="card-body"><h5 class="card-title text-center">Huawei GR5 2017</h5></div></div></div>
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <img src="/storage/apple.png" style="width: 450px; height: 500px;">
+                <img src="/images/apple.png" style="width: 450px; height: 500px;">
             </div>
             <div class="col-lg-6" style="margin-left: -60px;">
                 <h4>Send us a message if you need to contact us for more details...</h4>

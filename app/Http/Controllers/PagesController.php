@@ -48,7 +48,7 @@ class PagesController extends Controller
             {
 
                 $new_row['name']= $phone->name;
-                $new_row['image']= url('storage/phones/'.$phone->image1);
+                $new_row['image']= url('images/phones/'.$phone->image1);
                 $new_row['url']= url('phones/'.$phone->phone_id);
 
                 $row_set[] = $new_row; //build an array
@@ -208,7 +208,7 @@ class PagesController extends Controller
         if ($phone) {
             foreach ($phone as $cp){
                 $output .= '  <div class="card" style="height: 650px;">
-                            <img src="/storage/phones/'.$cp->image1.'" style="margin: auto;height: 270px;width: 240px;padding-top: 20px;">
+                            <img src="/images/phones/'.$cp->image1.'" style="margin: auto;height: 270px;width: 240px;padding-top: 20px;">
                             <div class="card-body">
                             <h4 class="text-center">'.$cp->name.'</h4>
                             <center><a href="/phones/'.$cp->phone_id.'" class="text-center" style="margin: auto;">See more details</a></center><br>

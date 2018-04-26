@@ -16,7 +16,7 @@
                                         <div class="col-lg-3">
                                             <div class="card" >
                                                 <div class="card-body">
-                                                    <div id="cart-img" style="margin: auto;"><img class="card-img-top"  src="/storage/phones/{{$row->image1}}"></div>
+                                                    <div id="cart-img" style="margin: auto;"><img class="card-img-top"  src="/images/phones/{{$row->image1}}"></div>
                                                     <br><h5 class="text-center"><a href="/phones/{{ $row->phone_id }}">{{ $row->name }}</a></h5>
                                                     <input type="hidden" value="{{$row->phone_id}}">
                                                     <br>

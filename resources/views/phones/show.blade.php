@@ -18,16 +18,16 @@
                             </ol>
                         </nav>    
                     <div id="spec-brief">
-                        <img src="/storage/phones/{{ $phone->image1 }}" id="show-phone">
+                        <img src="/images/phones/{{ $phone->image1 }}" id="show-phone">
                         <div class="row">
                             <div class="col-lg-4"><br>
-                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image2 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image2 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
+                                <a data-lightbox="roadtrip" href="/images/phones/{{ $phone->image2 }}"><span class="roll"></span><img src="/images/phones/{{ $phone->image2 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
                             </div>
                             <div class="col-lg-4"><br>
-                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image3 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image3 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
+                                <a data-lightbox="roadtrip" href="/images/phones/{{ $phone->image3 }}"><span class="roll"></span><img src="/images/phones/{{ $phone->image3 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
                             </div>
                             <div class="col-lg-4"><br>
-                                <a data-lightbox="roadtrip" href="/storage/phones/{{ $phone->image4 }}"><span class="roll"></span><img src="/storage/phones/{{ $phone->image4 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
+                                <a data-lightbox="roadtrip" href="/images/phones/{{ $phone->image4 }}"><span class="roll"></span><img src="/images/phones/{{ $phone->image4 }}" class="img-thumbnail" style="width:100px; height: 100px"></a>
                             </div>                           
                         </div><br>
                         <a href="/phones/compare/{{ $phone->phone_id }}" style="margin-bottom: 10px;" class="btn btn-danger btn-block btn-md">Compare</a>
@@ -212,7 +212,7 @@
             @foreach($relphones as $r)
                 <div class="col-lg-3">
                     <div class="card" style="height: 300px;"><br>
-                        <img class="img-fluid" src="/storage/phones/{{$r->image1}}" style="height: 200px; width: 180px; margin: auto;" alt="Card image cap">
+                        <img class="img-fluid" src="/images/phones/{{$r->image1}}" style="height: 200px; width: 180px; margin: auto;" alt="Card image cap">
                         <div class="card-body">
                             <a id="rel-path" href="/phones/{{$r->phone_id}}"><h6 class="card-title text-center">{{$r->name}}</h6></a>
                         </div>

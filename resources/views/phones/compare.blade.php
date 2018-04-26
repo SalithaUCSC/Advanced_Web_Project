@@ -31,7 +31,7 @@
 
                 <div class="col-lg-4 col-md-12" style="margin-top: 40px;float: left;">
                     <div class="card" style="height: 650px;">
-                        <img src="/storage/phones/{{ $phone->image1 }}" id="compare-phone-img" style="margin: auto;">
+                        <img src="/images/phones/{{ $phone->image1 }}" id="compare-phone-img" style="margin: auto;">
                         <div class="card-body">
                             <h4 class="text-center">{{$phone->name}}</h4><br>
                             <ul class="list-group">

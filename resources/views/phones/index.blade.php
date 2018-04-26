@@ -16,7 +16,7 @@
                     <br><h4 class="card-head text-center" id="card-head-phn"><i class="fas fa-mobile-alt"></i> Available Brands</h4><br>
                     <div class="list-group">
                         @foreach($brands as $row)
-                            <a href="/brand/{{ $row->brand }}"><li class="list-group-item text-left cat" id="{{ $row->brand_id }}" value="{{ $row->brand }}">{{ $row->brand }}<img src="/storage/phone_brands/{{ $row->brand_image }}" class="img-thumbnail" id="brand-img" style="width: 35px;height: 30px; float: right;"></li></a>
+                            <a href="/brand/{{ $row->brand }}"><li class="list-group-item text-left cat" id="{{ $row->brand_id }}" value="{{ $row->brand }}">{{ $row->brand }}<img src="/images/phone_brands/{{ $row->brand_image }}" class="img-thumbnail" id="brand-img" style="width: 35px;height: 30px; float: right;"></li></a>
                             <br>@endforeach
                     </div>
                 </div>	
@@ -57,7 +57,7 @@
                         @foreach($phones as $phone)
                             <div class="col-lg-3 col-md-4 col-sm-6" id="phone-card">
                                 <div class="card" id="phone-card"><br>
-                                    <div id="phone-card-img"><img class="card-img-top" id="phone-img" src="/storage/phones/{{$phone->image1}}" alt="Card image cap"></div>
+                                    <div id="phone-card-img"><img class="card-img-top" id="phone-img" src="/images/phones/{{$phone->image1}}" alt="Card image cap"></div>
                                     <div class="card-body">
                                         <a id="phone-path" href="/phones/{{ $phone->phone_id }}"><h5 class="card-title text-center">{{ $phone->name }}</h5></a><br>
                                         <button  class="btn btn-dark btn-sm" style="font-size: 12px;">Rs. {{ $phone->price }}</button>

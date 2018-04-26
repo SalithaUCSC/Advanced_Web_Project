@@ -16,7 +16,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-lg-3">
-                                        <div id="cart-img"><img class="card-img-top"  src="/storage/phones/{{$row->options->img}}"></div>
+                                        <div id="cart-img"><img class="card-img-top"  src="/images/phones/{{$row->options->img}}"></div>
                                     </div>
                                     <div class="col-lg-9">
                                         <div class="row">
