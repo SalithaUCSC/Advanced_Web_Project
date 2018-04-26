@@ -12,6 +12,7 @@ use App\Phone;
 use App\User;
 use App\Brand;
 use PDF;
+use Excel;
 use Alert;
 use App\WishList;
 use Illuminate\Support\Facades\Redirect;
@@ -136,8 +137,9 @@ class PagesController extends Controller
         if (Auth::check()) {
             $wishes = WishList::where('user_id', '=', auth()->user()->id)->get();
         }
-        Alert::success('you have full the price list', 'Phone List is loading...')->autoclose(3000);
+        Alert::success('You have full the price list', 'Phone List is loading...');
         return view('phones.price_table',['phones'=>$phones, 'wishes' => $wishes])->withTitle('Mobile Phones');
+        // $users = User::all();
     }
 
     public function phoneFilter(Request $request){
@@ -224,6 +226,17 @@ class PagesController extends Controller
             echo $output;
         }
 
+    }
+
+    public function export_list($type)
+    {
+        $phones = Phone::get()->toArray();
+        return Excel::create('phones', function($excel) use ($phones) {
+            $excel->sheet('Phone Data', function($sheet) use ($phones) 
+            {
+                $sheet->fromArray($phones);
+            });
+        })->download($type);
     }
 
     public function notFound(){

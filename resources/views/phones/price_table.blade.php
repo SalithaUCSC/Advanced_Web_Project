@@ -6,8 +6,9 @@
 
     {{--<h1>Price List</h1><br><br>--}}
     <div class="container" style="margin-bottom: 100px;margin-top: 100px;">
-        <h1>Price List of mobile phones</h1>
-        <a href="/pdf" class="btn btn-primary btn-md">Get PDF</a>
+        <h1>Price List of mobile phones</h1><br>
+        <a href="/pdf" class="btn btn-primary btn-sm"><i class="fas fa-file-pdf"></i> Download PDF</a>
+        <a href="{{ route('export', ['type' => 'xlsx']) }}" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Download Excel</a>
         <br><br>
         {{--<table class="table table-bordered table-striped" id="priceTable">--}}
             <table id="priceTable" class="table table-striped table-bordered table-responsive-md" cellspacing="0" width="100%">

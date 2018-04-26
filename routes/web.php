@@ -52,6 +52,7 @@ Route::get('/phones/reviews/{id}', 'ReviewsController@index')->name('review');
 Route::get('/phones/review/{rid}', 'ReviewsController@getReview')->name('review_single');
 
 Route::get('/price_list/get_data', 'PagesController@getPhones')->name('get_data');
+Route::get('export_list/{type}', 'PagesController@export_list')->name('export');
 
 Route::get('/phones/compare/{id}', 'PagesController@compare');
 
