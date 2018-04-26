@@ -12,7 +12,7 @@
 9. Reply to comments
 10. Search mobile phones real time
 11. Search phones real time accoring to brand and price range
-12. Download phone list as a PDF
+12. Download phone list as a PDF or Excel file
 13. Add phones to cart(add + update + remove)
 14. Add phones to wishlist(add + remove + move to cart)
 25. Make a cash on delivery order
